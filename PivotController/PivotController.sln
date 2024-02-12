@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.4.33103.184
+VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PivotController", "PivotController.csproj", "{F4BAA6A2-BC73-40F6-9C0E-15EDD347E26D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotController", "PivotController\PivotController.csproj", "{06C83621-4D8F-4AAA-8DB6-00252AD8118C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F4BAA6A2-BC73-40F6-9C0E-15EDD347E26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4BAA6A2-BC73-40F6-9C0E-15EDD347E26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4BAA6A2-BC73-40F6-9C0E-15EDD347E26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4BAA6A2-BC73-40F6-9C0E-15EDD347E26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C83621-4D8F-4AAA-8DB6-00252AD8118C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C83621-4D8F-4AAA-8DB6-00252AD8118C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C83621-4D8F-4AAA-8DB6-00252AD8118C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C83621-4D8F-4AAA-8DB6-00252AD8118C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FDF73370-CE59-4CD9-AFCC-F914CC1694C1}
+		SolutionGuid = {BA0D577F-34B9-45DC-9B58-A27663FC9E26}
 	EndGlobalSection
 EndGlobal

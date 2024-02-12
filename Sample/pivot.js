@@ -1,6 +1,6 @@
 var fieldlistObj = new ej.pivotview.PivotFieldList({
     dataSourceSettings: {
-        url: 'https://localhost:44350/api/pivot/post',
+        url: 'https://localhost:44372/api/pivot/post',
         mode: 'Server',
         type: 'JSON',
         allowMemberFilter: true,
@@ -13,10 +13,12 @@ var fieldlistObj = new ej.pivotview.PivotFieldList({
     },
     renderMode: 'Fixed',
     afterServiceInvoke: function (args) {
-        data = JSON.parse(args.response).data;
-        grid.dataSource = data;
-        grid.columns = getColumns();
-        chart.series[0].dataSource = data;
+		if (args.action != "fetchFieldMembers") {
+			data = JSON.parse(args.response).data;
+			grid.dataSource = data;
+			grid.columns = getColumns();
+			chart.series[0].dataSource = data;
+		}
     }
 });
 fieldlistObj.appendTo('#PivotFieldList');
