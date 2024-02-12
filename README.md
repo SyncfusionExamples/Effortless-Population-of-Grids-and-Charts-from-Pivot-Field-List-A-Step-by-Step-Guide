@@ -1,6 +1,6 @@
-# How to render a Pivot Field List using a Server-side Engine
+# Effortless Population of Grids and Charts from Pivot Field List: A Step-by-Step Guide
 
-This project explains how to render the pivot field list in the JavaScript Pivot Table component using a server-side engine, as well as how to combine other data visualization components such as data grid and chart components based on the field list report information.
+This project demonstrates how to render grid and chart components using a server-side pivot field list component.
 
 The following steps demonstrate how to run the application,
 
