@@ -33,28 +33,28 @@ namespace PivotController.Controllers
             {
                 returnValue["memberName"] = param.MemberName;
                 Dictionary<string, Members> result = new Dictionary<string, Members>();
-                result.Add("FY 2005", new Members()
+                result.Add("FY 2015", new Members()
                 {
-                    Caption = "FY 2005",
-                    Name = "FY 2005",
+                    Caption = "FY 2015",
+                    Name = "FY 2015",
                     IsSelected = true
                 });
-                result.Add("FY 2006", new Members()
+                result.Add("FY 2016", new Members()
                 {
-                    Caption = "FY 2006",
-                    Name = "FY 2006",
+                    Caption = "FY 2016",
+                    Name = "FY 2016",
                     IsSelected = true
                 });
-                result.Add("FY 2007", new Members()
+                result.Add("FY 2017", new Members()
                 {
-                    Caption = "FY 2007",
-                    Name = "FY 2007",
+                    Caption = "FY 2017",
+                    Name = "FY 2017",
                     IsSelected = true
                 });
-                result.Add("FY 2008", new Members()
+                result.Add("FY 2018", new Members()
                 {
-                    Caption = "FY 2008",
-                    Name = "FY 2008",
+                    Caption = "FY 2018",
+                    Name = "FY 2018",
                     IsSelected = true
                 });
                 returnValue["members"] = JsonConvert.SerializeObject(result);
@@ -78,7 +78,7 @@ namespace PivotController.Controllers
             Dictionary<string, object> result = PivotEngine.GetSerializedPivotValues();
             result["pivotCount"] = "";
             result["pivotValue"] = "";
-            result["data"] = new PivotViewData().GetVirtualData(1000);
+            result["data"] = new PivotViewData().GetVirtualData(1000, param);
             return result;
         }
 
@@ -91,7 +91,7 @@ namespace PivotController.Controllers
             public double Price { get; set; }
             public string Year { get; set; }
 
-            public List<PivotViewData> GetVirtualData(int count)
+            public List<PivotViewData> GetVirtualData(int count, FetchData param)
             {
                 List<PivotViewData> VirtualData = new List<PivotViewData>();
 
@@ -100,7 +100,7 @@ namespace PivotController.Controllers
                     PivotViewData p = new PivotViewData
                     {
                         ProductID = "PRO-" + (count + i),
-                        Year = (new string[] { "FY 2015", "FY 2016", "FY 2017", "FY 2018", "FY 2019" })[new Random().Next(5)],
+                        Year = param.Action == "onFilter" ? param.FilterItem.Items[new Random().Next(param.FilterItem.Items.Length)] : (new string[] { "FY 2015", "FY 2016", "FY 2017", "FY 2018", "FY 2019" })[new Random().Next(5)],
                         Country = (new string[] { "Canada", "France", "Australia", "Germany", "France" })[new Random().Next(5)],
                         Product = (new string[] { "Car", "Van", "Bike", "Flight", "Bus" })[new Random().Next(5)],
                         Price = (3.4 * i) + 500,
